@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import portrait from '../assets/christian_sisti.jpg';
 ---
 
 <Layout
@@ -10,6 +12,13 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Hero -->
     <p class="text-xs font-semibold tracking-widest uppercase text-navy-500 mb-3">About</p>
+    <Image
+      src={portrait}
+      alt="Christian Sisti"
+      width={192}
+      height={192}
+      class="rounded-full object-cover mb-5 ring-2 ring-warm-100 w-24 h-24"
+    />
     <h1 class="text-4xl font-semibold text-navy-950 mb-2">Christian Sisti</h1>
     <p class="text-navy-500 text-lg mb-10">
       High-Energy, Customer-Centered, Flow-Driven Engineering Director
