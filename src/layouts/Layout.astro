@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+import SEO from '../components/SEO.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+  pubDate?: Date;
+}
+
+const { title, description, image, type, pubDate } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO {title} {description} {image} {type} {pubDate} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+
+    <header class="border-b border-warm-100">
+      <nav class="mx-auto max-w-3xl px-6 py-5 flex items-center justify-between">
+        <a href="/" class="text-sm font-semibold tracking-wide text-navy-900 hover:text-navy-700 transition-colors">
+          Christian Sisti
+        </a>
+        <ul class="flex gap-8 text-sm text-navy-700">
+          <li>
+            <a
+              href="/about"
+              class:list={['hover:text-navy-900 transition-colors', { 'font-medium text-navy-900': currentPath === '/about' }]}
+            >
+              About
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="mx-auto w-full max-w-3xl px-6 py-16 flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-warm-100 py-6">
+      <p class="text-center text-xs text-warm-300">&copy; {new Date().getFullYear()} Christian Sisti</p>
+    </footer>
+
+  </body>
+</html>
