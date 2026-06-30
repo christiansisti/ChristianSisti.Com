@@ -1,0 +1,68 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const pubDate = post.data.pubDate.toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+
+const blogImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/blog/*');
+const heroImageModule = post.data.heroImage
+  ? await blogImages[`/src/assets/blog/${post.data.heroImage}`]?.()
+  : null;
+const heroImage = heroImageModule?.default ?? null;
+---
+
+<Layout title={post.data.title} description={post.data.description} type="article" pubDate={post.data.pubDate}>
+  <article class="py-4">
+
+    <header class="mb-12">
+      <p class="text-xs font-semibold tracking-widest uppercase text-navy-500 mb-4">
+        <a href="/" class="hover:text-navy-900 transition-colors">Writing</a>
+      </p>
+      <h1 class="text-4xl font-semibold text-navy-950 leading-tight mb-4">{post.data.title}</h1>
+      <p class="text-sm text-navy-500">{pubDate}</p>
+    </header>
+
+    {heroImage && (
+      <figure class="mb-12">
+        <Image
+          src={heroImage}
+          alt={post.data.heroImageAlt ?? ''}
+          width={800}
+          quality={90}
+          class="w-full rounded-lg object-cover"
+        />
+        {post.data.heroImageCredit && (
+          <figcaption class="mt-2 text-xs text-navy-500 text-center" set:html={post.data.heroImageCredit} />
+        )}
+      </figure>
+    )}
+
+    <div class="prose prose-navy max-w-none
+      [&>p]:text-navy-700 [&>p]:leading-relaxed [&>p]:mb-6
+      [&>h2]:text-2xl [&>h2]:font-semibold [&>h2]:text-navy-950 [&>h2]:mt-12 [&>h2]:mb-4
+      [&>h3]:text-xl [&>h3]:font-medium [&>h3]:text-navy-900 [&>h3]:mt-8 [&>h3]:mb-3
+      [&>blockquote]:border-l-4 [&>blockquote]:border-navy-500 [&>blockquote]:pl-5 [&>blockquote]:italic [&>blockquote]:text-navy-700 [&>blockquote]:my-8
+      [&>blockquote>p]:mb-0
+      [&>hr]:border-warm-100 [&>hr]:my-10
+      [&_a]:text-navy-500 [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:text-navy-900
+      [&_strong]:text-navy-900 [&_strong]:font-medium
+      [&>p>em]:text-navy-600
+      ">
+      <Content />
+    </div>
+
+  </article>
+</Layout>
