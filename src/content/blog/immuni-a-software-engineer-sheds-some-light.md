@@ -18,6 +18,8 @@ The Italian contact tracing application reached two million downloads, even if i
 
 To understand how Immuni works, we interviewed Christian Sisti, 37, Engineering Manager living in Barcelona. Graduated at the University of Pisa, Sisti has been a fellow researcher at [CNR](https://www.area.pi.cnr.it/) in the Human-Computer Interaction (HCI) field.
 
+![Christian Sisti in 2020](../../assets/blog/christian_sisti_2020.png)
+
 ---
 
 **Have you downloaded Immuni?**
