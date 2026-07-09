@@ -60,7 +60,13 @@ const heroImage = heroImageModule?.default ?? null;
       [&_a]:text-navy-500 [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:text-navy-900
       [&_strong]:text-navy-900 [&_strong]:font-medium
       [&>p>em]:text-navy-600
-      [&_img]:rounded-lg [&_img]:max-w-xs [&_img]:mx-auto [&_img]:block
+      [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:my-4 [&_ol]:text-navy-700
+      [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:my-4 [&_ul]:text-navy-700
+      [&_li]:mb-2 [&_li]:leading-relaxed
+      [&_li>p]:mb-0
+      [&_img]:rounded-lg [&_img]:max-w-xs [&_img]:mx-auto [&_img]:block [&_img]:mb-1
+      [&_p:has(img)]:!mb-0
+      [&_p:has(img)+p]:!text-xs [&_p:has(img)+p]:text-navy-500 [&_p:has(img)+p]:text-center [&_p:has(img)+p]:!mb-8 [&_p:has(img)+p>em]:not-italic
       ">
       <Content />
     </div>
