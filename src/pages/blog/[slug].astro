@@ -45,7 +45,7 @@ const heroImage = heroImageModule?.default ?? null;
           class="w-full rounded-lg object-cover"
         />
         {post.data.heroImageCredit && (
-          <figcaption class="mt-2 text-xs text-navy-500 text-center" set:html={post.data.heroImageCredit} />
+          <figcaption class="mt-2 text-xs text-navy-500 text-center [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:text-navy-900 [&_a]:transition-colors" set:html={post.data.heroImageCredit} />
         )}
       </figure>
     )}
@@ -65,8 +65,7 @@ const heroImage = heroImageModule?.default ?? null;
       [&_li]:mb-2 [&_li]:leading-relaxed
       [&_li>p]:mb-0
       [&_img]:rounded-lg [&_img]:max-w-xs [&_img]:mx-auto [&_img]:block [&_img]:mb-1
-      [&_p:has(img)]:!mb-0
-      [&_p:has(img)+p]:!text-xs [&_p:has(img)+p]:text-navy-500 [&_p:has(img)+p]:text-center [&_p:has(img)+p]:!mb-8 [&_p:has(img)+p>em]:not-italic
+      [&_small]:block [&_small]:text-xs [&_small]:text-navy-500 [&_small]:text-center [&_small]:mt-1 [&_small]:mb-6 [&_small_a]:text-navy-500
       ">
       <Content />
     </div>

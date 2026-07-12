@@ -14,7 +14,7 @@ heroImageCredit: 'Photo by <a href="https://unsplash.com/@aurel__lens">Aurélien
 
 ![What is productivity?](../../assets/blog/what_is_productivity.jpeg)
 
-*Photo by [Xavi Cabrera](https://unsplash.com/@xavi_cabrera) on [Unsplash](https://unsplash.com/)*
+<small>Photo by <a href="https://unsplash.com/@xavi_cabrera">Xavi Cabrera</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
 I have always been interested in the topic of productivity since I was in the Engineering side. But I remember that, at that time, I considered the challenge of how to **measure my productivity** something almost given for free. I was easily able to check how many deliveries I was doing on any given day, how many features I was developing, how many bugs I was fixing, etc. 
 
@@ -34,7 +34,7 @@ There is a caveat to this approach, a bit of a challenge: you might end up addin
 
 ![The role of procrastination](../../assets/blog/the_role_of_procrastination.jpeg)
 
-*Photo by [Brett Jordan](https://unsplash.com/@brett_jordan) on [Unsplash](https://unsplash.com/)*
+<small>Photo by <a href="https://unsplash.com/@brett_jordan">Brett Jordan</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
 You cannot talk about productivity without mentioning the role of procrastination. Procrastination is something that is a part of the human being. Let's be clear: **everyone procrastinates**. Everyone, even the most productive person in the world. Every productivity hero, guru, etc., everybody does procrastinate.
 
@@ -48,7 +48,7 @@ Awareness and being deliberate are the two concepts that I would like you to kee
 
 ![Mindfulness and meditation](../../assets/blog/mindfulness_and_meditation.jpeg)
 
-*Photo by [Dingzeyu Li](https://unsplash.com/@dingzeyuli) on [Unsplash](https://unsplash.com/)*
+<small>Photo by <a href="https://unsplash.com/@dingzeyuli">Dingzeyu Li</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
 A short story. My wife is Buddhist, so to know her better (well was my girlfriend when I realized it, lol), I read a few books about it (one of them was "The Reluctant Buddhist" by William Wollard). I'm still not Buddhist, but I got caught about its philosophy, which includes **Mindfulness & Meditation** as part of the practices.
 
@@ -62,7 +62,7 @@ But how this is related to productivity? In my own experience, it did help me wi
 
 ![The rule of three](../../assets/blog/the_rule_of_three.jpeg)
 
-*Photo by [Gabriel Meinert](https://unsplash.com/@gabrielmeinert) on [Unsplash](https://unsplash.com/)*
+<small>Photo by <a href="https://unsplash.com/@gabrielmeinert">Gabriel Meinert</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
 While Meditations help to see things more clearly, you still have to actively limit your work in progress. Among various approaches I have tried, the one that I found most effective is called the **Rule of Three**. You basically focus on the top three most important goals, your three Lego models. You can apply it recursively to break the work into smaller chunks. For example, you could decide the priority for the year, then for the month, ..., up to any given day. The important thing is to make sure that, whatever smaller step you are making, it is contributing towards your bigger picture.
 
@@ -96,7 +96,7 @@ But there is a warning, the so-called **Parkinson's law**: "the work expands to 
 
 ![Learning is productivity](../../assets/blog/learning_is_productivity.jpeg)
 
-*Photo by [Tim Mossholder](https://unsplash.com/@timmossholder) on [Unsplash](https://unsplash.com/)*
+<small>Photo by <a href="https://unsplash.com/@timmossholder">Tim Mossholder</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
 Let's now do a quick game. Take 30 seconds and try to think of your top three priorities..............done? Now tell me; is **Learning** any of them? If the answer is no, it's unlikely you ever have time for it. But keep learning and keep improving is deeply bound to your **productivity**! 
 
@@ -108,7 +108,7 @@ In some cases, you may not even be aware of the fact you are learning. Any situa
 
 ![Productivity tools](../../assets/blog/productivity_tools.jpeg)
 
-*Photo by [Cesar Carlevarino Aragon](https://unsplash.com/@carlevarino) on [Unsplash](https://unsplash.com/)*
+<small>Photo by <a href="https://unsplash.com/@carlevarino">Cesar Carlevarino Aragon</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
 Now you know some techniques that may be handy for you to improve your productivity. But how about actual **productivity tools**? There are plenty out there and I tried a few of them: tools that aim to let you create the best to-do list ever; tools that generate a certain background noise (like the one in a cafeteria for example) that, based on studies, aim to increase your ability to focus; I even heard of a special helmet that you can put on yourself to measure the amount of focus you have during the day. 
 
@@ -120,7 +120,7 @@ On top of that there is potentially another trap: in most cases, these tools req
 
 ![The recipe](../../assets/blog/the_recipe.jpeg)
 
-*Photo by [Rinck Content Studio](https://unsplash.com/@rinckad) on [Unsplash](https://unsplash.com/)*
+<small>Photo by <a href="https://unsplash.com/@rinckad">Rinck Content Studio</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
 Grab your pen! I am finally ready to reveal my recipe for the **Productivity Cocktail**. Take a glass and pour in equal parts: focus management, time management, and energy management. 
 
