@@ -3,7 +3,7 @@ title: "The Productivity Cocktail"
 description: "Focus, time, and energy management for engineering leaders — with a recipe that actually works."
 pubDate: 2023-02-13
 tags: ["leadership", "productivity", "engineering-management"]
-heroImage: "barman.png"
+heroImage: "2023/productivity-cocktail/barman.png"
 heroImageAlt: "A barman preparing a cocktail"
 heroImageCredit: 'Photo by <a href="https://unsplash.com/@aurel__lens">Aurélien Lemasson-Théobald</a> on <a href="https://unsplash.com/">Unsplash</a>'
 ---
@@ -12,7 +12,7 @@ heroImageCredit: 'Photo by <a href="https://unsplash.com/@aurel__lens">Aurélien
 
 ## What is productivity?
 
-![What is productivity?](../../assets/blog/what_is_productivity.jpeg)
+![What is productivity?](../../assets/blog/2023/productivity-cocktail/what_is_productivity.jpeg)
 
 <small>Photo by <a href="https://unsplash.com/@xavi_cabrera">Xavi Cabrera</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
@@ -32,7 +32,7 @@ There is a caveat to this approach, a bit of a challenge: you might end up addin
 
 ## The role of procrastination
 
-![The role of procrastination](../../assets/blog/the_role_of_procrastination.jpeg)
+![The role of procrastination](../../assets/blog/2023/productivity-cocktail/the_role_of_procrastination.jpeg)
 
 <small>Photo by <a href="https://unsplash.com/@brett_jordan">Brett Jordan</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
@@ -46,7 +46,7 @@ Awareness and being deliberate are the two concepts that I would like you to kee
 
 ## Mindfulness & Meditation
 
-![Mindfulness and meditation](../../assets/blog/mindfulness_and_meditation.jpeg)
+![Mindfulness and meditation](../../assets/blog/2023/productivity-cocktail/mindfulness_and_meditation.jpeg)
 
 <small>Photo by <a href="https://unsplash.com/@dingzeyuli">Dingzeyu Li</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
@@ -60,7 +60,7 @@ But how this is related to productivity? In my own experience, it did help me wi
 
 ## The rule of three
 
-![The rule of three](../../assets/blog/the_rule_of_three.jpeg)
+![The rule of three](../../assets/blog/2023/productivity-cocktail/the_rule_of_three.jpeg)
 
 <small>Photo by <a href="https://unsplash.com/@gabrielmeinert">Gabriel Meinert</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
@@ -94,7 +94,7 @@ But there is a warning, the so-called **Parkinson's law**: "the work expands to 
 
 ## Learning is productivity
 
-![Learning is productivity](../../assets/blog/learning_is_productivity.jpeg)
+![Learning is productivity](../../assets/blog/2023/productivity-cocktail/learning_is_productivity.jpeg)
 
 <small>Photo by <a href="https://unsplash.com/@timmossholder">Tim Mossholder</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
@@ -106,7 +106,7 @@ In some cases, you may not even be aware of the fact you are learning. Any situa
 
 ## Productivity tools
 
-![Productivity tools](../../assets/blog/productivity_tools.jpeg)
+![Productivity tools](../../assets/blog/2023/productivity-cocktail/productivity_tools.jpeg)
 
 <small>Photo by <a href="https://unsplash.com/@carlevarino">Cesar Carlevarino Aragon</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 
@@ -118,7 +118,7 @@ On top of that there is potentially another trap: in most cases, these tools req
 
 ## The recipe
 
-![The recipe](../../assets/blog/the_recipe.jpeg)
+![The recipe](../../assets/blog/2023/productivity-cocktail/the_recipe.jpeg)
 
 <small>Photo by <a href="https://unsplash.com/@rinckad">Rinck Content Studio</a> on <a href="https://unsplash.com/">Unsplash</a></small>
 

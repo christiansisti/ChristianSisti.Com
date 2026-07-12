@@ -3,7 +3,7 @@ title: "Immuni: A Software Engineer Sheds Some Light"
 description: "An interview with Engineering Manager Christian Sisti discussing Italy's COVID-19 contact tracing app — its architecture, privacy trade-offs, and what made it hard to adopt."
 pubDate: 2020-11-24
 tags: ["engineering", "privacy", "mobile"]
-heroImage: "covid-19_Adam_Niescioruk_Unsplash.png"
+heroImage: "2020/immuni/covid-19_Adam_Niescioruk_Unsplash.png"
 heroImageAlt: "Close-up of a COVID-19 test kit"
 heroImageCredit: 'Photo by <a href="https://unsplash.com/@adamsky1973">Adam Nieścioruk</a> on <a href="https://unsplash.com/">Unsplash</a>'
 ---
@@ -18,7 +18,7 @@ The Italian contact tracing application reached two million downloads, even if i
 
 To understand how Immuni works, we interviewed Christian Sisti, 37, Engineering Manager living in Barcelona. Graduated at the University of Pisa, Sisti has been a fellow researcher at [CNR](https://www.area.pi.cnr.it/) in the Human-Computer Interaction (HCI) field.
 
-![Christian Sisti in 2020](../../assets/blog/christian_sisti_2020.png)
+![Christian Sisti in 2020](../../assets/blog/2020/immuni/christian_sisti_2020.png)
 
 ---
 

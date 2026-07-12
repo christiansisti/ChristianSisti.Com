@@ -3,7 +3,7 @@ title: "Why Your Impostor Syndrome is a Leadership Feature, Not a Bug"
 description: "From 1978 Psychology to modern Engineering Management: A data-driven journey into the science of self-doubt."
 pubDate: 2026-02-18
 tags: ["leadership", "engineering-management", "psychology"]
-heroImage: "impostor_syndrome_hero_image.png"
+heroImage: "2026/impostor-syndrome/impostor_syndrome_hero_image.png"
 heroImageAlt: "A person standing in front of a mirror"
 heroImageCredit: 'Photo by <a href="https://unsplash.com/@michael_david_shannon">Michael Shannon</a> on <a href="https://unsplash.com/">Unsplash</a>'
 ---
@@ -32,7 +32,7 @@ But it was **Dr. Valerie Young** who gave us the map. She identified 5 archetype
 
 As an engineer, I don't like vague feelings. I like metrics. To understand my own "Impostor profile," I used **Gemini, GitHub,** and **Streamlit** to build a Web App that visualise the score for each of these archetypes.
 
-[![A chart visualising my personal scores on the Impostors Archetypes.](../../assets/blog/my_impostor_archetypes.png)](https://leadership-impostor-tool.streamlit.app/)
+[![A chart visualising my personal scores on the Impostors Archetypes.](../../assets/blog/2026/impostor-syndrome/my_impostor_archetypes.png)](https://leadership-impostor-tool.streamlit.app/)
 
 <small>My personal weight against the impostor archetypes.</small>
 

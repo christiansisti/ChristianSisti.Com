@@ -17,7 +17,7 @@ const pubDate = post.data.pubDate.toLocaleDateString('en-GB', {
   year: 'numeric',
 });
 
-const blogImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/blog/*');
+const blogImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/blog/**/*');
 const heroImageModule = post.data.heroImage
   ? await blogImages[`/src/assets/blog/${post.data.heroImage}`]?.()
   : null;
