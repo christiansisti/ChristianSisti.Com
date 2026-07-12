@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+import leadershipSelfDeception from '../assets/books/leadership_self_deception.jpg';
+import creativityInc from '../assets/books/creativity-inc.jpg';
+import productivityProject from '../assets/books/the-productivity-project.jpg';
+import teamTopologies from '../assets/books/team-topologies.jpg';
+import cultureCode from '../assets/books/the-culture-code.jpg';
+import howToMeasure from '../assets/books/how-to-measure-anything.jpg';
+import management30 from '../assets/books/management-3-0.jpg';
+import drive from '../assets/books/drive.jpg';
+
+const books = [
+  {
+    title: "Leadership and Self-Deception",
+    author: "The Arbinger Institute",
+    year: 2022,
+    cover: leadershipSelfDeception,
+    takeaway: "If your feelings do not match your actions, you are self-betraying.",
+    readIf: "You believe you don't need to read it.",
+  },
+  {
+    title: "Creativity, Inc.",
+    author: "Ed Catmull",
+    year: 2021,
+    cover: creativityInc,
+    takeaway: "The manager's role is to try to uncover what is unseen.",
+    readIf: "You're a Pixar enthusiast seeking inspiration from successful organisational practices.",
+  },
+  {
+    title: "The Productivity Project",
+    author: "Chris Bailey",
+    year: 2020,
+    cover: productivityProject,
+    takeaway: "Accomplishment requires deliberate intention. Mindfulness enhances outcomes.",
+    readIf: "You struggle with daily satisfaction regarding the work you completed.",
+  },
+  {
+    title: "Team Topologies",
+    author: "Matthew Skelton & Manuel Pais",
+    year: 2020,
+    cover: teamTopologies,
+    takeaway: "Organisations at different levels of maturity need different organisational structures.",
+    readIf: "Your team is growing and you need to rethink how it's organised.",
+  },
+  {
+    title: "The Culture Code",
+    author: "Daniel Coyle",
+    year: 2019,
+    cover: cultureCode,
+    takeaway: "A single negative — or positive — individual can significantly impact team performance.",
+    readIf: "You're puzzled by an underperforming group.",
+  },
+  {
+    title: "How to Measure Anything",
+    author: "Douglas W. Hubbard",
+    year: 2018,
+    cover: howToMeasure,
+    takeaway: "You need less data than you would expect to make a more informed decision.",
+    readIf: "You believe certain things in your business are simply unmeasurable.",
+  },
+  {
+    title: "Management 3.0",
+    author: "Jurgen Appelo",
+    year: 2017,
+    cover: management30,
+    takeaway: "Applying the right tool at the right moment is everything. Servant leadership matters.",
+    readIf: "You want a comprehensive integration of leadership theory and practice.",
+  },
+  {
+    title: "Drive",
+    author: "Daniel H. Pink",
+    year: 2016,
+    cover: drive,
+    takeaway: "My foundational management read. Intrinsic motivation is the engine — align with it.",
+    readIf: "You're unfamiliar with the distinction between intrinsic and extrinsic motivation.",
+  },
+];
+---
+
+<Layout
+  title="Bookshelf — Christian Sisti"
+  description="Books that shaped how I think about leadership, engineering, and getting things done."
+>
+  <div class="py-4">
+    <p class="text-xs font-semibold tracking-widest uppercase text-navy-500 mb-3">Bookshelf</p>
+    <h1 class="text-4xl font-semibold text-navy-950 mb-3">Reading List</h1>
+    <p class="text-lg text-navy-700 mb-14">
+      Books that shaped how I think about leadership, engineering, and getting things done.
+    </p>
+
+    <div class="space-y-10">
+      {books.map((book) => (
+        <div class="border-t border-warm-100 pt-8 flex gap-6">
+          <div class="shrink-0 w-32">
+            {book.cover ? (
+              <Image
+                src={book.cover}
+                alt={`Cover of ${book.title}`}
+                width={128}
+                class="rounded shadow-sm w-full"
+              />
+            ) : (
+              <div class="w-32 h-44 rounded shadow-sm bg-warm-100 flex items-center justify-center">
+                <span class="text-xs text-navy-400 text-center px-1 leading-tight">Cover coming soon</span>
+              </div>
+            )}
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-baseline gap-4 mb-1">
+              <h2 class="text-xl font-semibold text-navy-950">{book.title}</h2>
+              <span class="text-xs text-navy-500 shrink-0">{book.year}</span>
+            </div>
+            <p class="text-sm text-navy-500 mb-5">{book.author}</p>
+            <blockquote class="border-l-2 border-navy-300 pl-4 italic text-navy-700 mb-4">
+              {book.takeaway}
+            </blockquote>
+            <p class="text-sm text-navy-700">
+              <span class="font-medium text-navy-900">Read it if:</span> {book.readIf}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
