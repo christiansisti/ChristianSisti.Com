@@ -35,6 +35,7 @@ Use this profile to inform content decisions (blog post framing, bio updates, SE
 - **Palette**: Navy (`--color-navy-*`) on warm white (`--color-warm-*`) — custom tokens defined in `src/styles/global.css`
 - **Key colors**: `navy-950` headings · `navy-700` body · `navy-500` accents · `warm-50` background
 - **Max content width**: `max-w-3xl` centered with `px-6` padding
+- **Mobile-first**: every page and feature must be responsive — use Tailwind responsive prefixes (`sm:`, `md:`) for all layouts, font sizes, and spacing; default to stacked/single-column on mobile, side-by-side on `sm:` and up
 
 ## Project structure
 
