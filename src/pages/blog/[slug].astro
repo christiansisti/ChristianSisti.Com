@@ -28,10 +28,10 @@ const heroImage = heroImageModule?.default ?? null;
   <article class="py-4">
 
     <header class="mb-12">
-      <p class="text-xs font-semibold tracking-widest uppercase text-navy-500 mb-4">
-        <a href="/" class="hover:text-navy-900 transition-colors">Writing</a>
-      </p>
-      <h1 class="text-4xl font-semibold text-navy-950 leading-tight mb-4">{post.data.title}</h1>
+      <a href="/" class="inline-flex items-center gap-1 text-xs font-semibold tracking-widest uppercase text-navy-500 hover:text-navy-900 transition-colors mb-3">
+        <span aria-hidden="true">←</span> Writing
+      </a>
+      <h1 class="text-4xl font-semibold text-navy-950 leading-tight mb-2">{post.data.title}</h1>
       <p class="text-sm text-navy-500">{pubDate}</p>
     </header>
 
@@ -68,6 +68,12 @@ const heroImage = heroImageModule?.default ?? null;
       [&_small]:block [&_small]:text-xs [&_small]:text-navy-500 [&_small]:text-center [&_small]:mt-1 [&_small]:mb-6 [&_small_a]:text-navy-500
       ">
       <Content />
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-warm-100">
+      <a href="/" class="inline-flex items-center gap-1 text-sm text-navy-500 hover:text-navy-900 transition-colors">
+        <span aria-hidden="true">←</span> Back to Writing
+      </a>
     </div>
 
   </article>
