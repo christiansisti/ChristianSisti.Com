@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const organiser = [
+  {
+    event: "LeadDev Barcelona",
+    role: "Founding Organiser",
+    years: "2025 — ongoing",
+    description: "Curating spaces for engineering leaders to tackle the industry's toughest organisational challenges.",
+  },
+  {
+    event: "JBCNConf",
+    role: "Organiser",
+    years: "2017 — 2018",
+    description: "Java & JVM conference in Barcelona.",
+  },
+];
+
+const attendeeByYear: Record<number, string[]> = {
+  2026: ["LeadDev London", "Mobile World Congress"],
+  2025: ["LeadDev Berlin", "Mobile World Congress"],
+  2024: ["LeadDev London", "Mobile World Congress"],
+  2022: ["LeadDev Berlin", "Mobile World Congress"],
+  2019: ["Agile Prague"],
+  2018: ["Google Firebase Summit"],
+  2017: ["Mobile World Congress", "Spring I/O"],
+};
+---
+
+<Layout
+  title="Conferences — Christian Sisti"
+  description="Conferences and events where Christian Sisti has spoken, organised, or participated as an attendee."
+>
+  <div class="py-4">
+    <p class="text-xs font-semibold tracking-widest uppercase text-navy-500 mb-3">Conferences</p>
+    <h1 class="text-4xl font-semibold text-navy-950 mb-2">Events</h1>
+    <p class="text-lg text-navy-500 mb-10">Where I've spoken, organised, and learned.</p>
+
+    <hr class="border-warm-100 mb-10" />
+
+    <!-- Speaker -->
+    <section class="mb-12">
+      <h2 class="text-xs font-semibold tracking-widest uppercase text-navy-500 mb-6">As a Speaker</h2>
+      <blockquote class="border-l-2 border-navy-300 pl-4 italic text-navy-700">
+        During my early career as a Fellow Researcher in Human-Computer Interaction, I presented at international conferences. I plan to return to the stage — watch this space.
+      </blockquote>
+    </section>
+
+    <hr class="border-warm-100 mb-10" />
+
+    <!-- Organiser -->
+    <section class="mb-12">
+      <h2 class="text-xs font-semibold tracking-widest uppercase text-navy-500 mb-6">As an Organiser</h2>
+      <div class="space-y-5">
+        {organiser.map((item) => (
+          <div class="flex gap-6 sm:gap-10">
+            <span class="text-sm text-navy-500 shrink-0 w-32 pt-px">{item.years}</span>
+            <div>
+              <p class="text-sm font-semibold text-navy-950 mb-1">{item.event}</p>
+              <p class="text-sm text-navy-500 mb-1">{item.role}</p>
+              <p class="text-sm text-navy-700">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <hr class="border-warm-100 mb-10" />
+
+    <!-- Attendee -->
+    <section>
+      <h2 class="text-xs font-semibold tracking-widest uppercase text-navy-500 mb-6">As an Attendee</h2>
+      <div class="space-y-5">
+        {Object.entries(attendeeByYear).sort(([a], [b]) => Number(b) - Number(a)).map(([year, events]) => (
+          <div class="flex gap-6 sm:gap-10">
+            <span class="text-sm text-navy-500 shrink-0 w-10 pt-px">{year}</span>
+            <div class="flex flex-wrap gap-2">
+              {events.map((event) => (
+                <span class="text-sm text-navy-700 bg-warm-100 px-3 py-1 rounded-full">{event}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+  </div>
+</Layout>

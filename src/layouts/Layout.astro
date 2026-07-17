@@ -52,6 +52,14 @@ const currentPath = Astro.url.pathname;
           </li>
           <li>
             <a
+              href="/conferences"
+              class:list={['hover:text-navy-900 transition-colors', { 'font-medium text-navy-900': currentPath === '/conferences' }]}
+            >
+              Conferences
+            </a>
+          </li>
+          <li>
+            <a
               href="/about"
               class:list={['hover:text-navy-900 transition-colors', { 'font-medium text-navy-900': currentPath === '/about' }]}
             >
