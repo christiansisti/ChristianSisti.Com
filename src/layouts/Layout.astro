@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import SEO from '../components/SEO.astro';
+import { Image } from 'astro:assets';
+import headerImg from '../assets/header.png';
 
 interface Props {
   title: string;
@@ -69,6 +71,16 @@ const currentPath = Astro.url.pathname;
         </ul>
       </nav>
     </header>
+
+    <div class="w-full">
+      <Image
+        src={headerImg}
+        alt=""
+        width={1280}
+        quality={90}
+        class="w-full object-cover max-h-48 sm:max-h-64"
+      />
+    </div>
 
     <main class="mx-auto w-full max-w-3xl px-6 py-10 sm:py-16 flex-1">
       <slot />
