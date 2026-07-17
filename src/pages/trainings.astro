@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const trainings = [
+  {
+    title: "Generative AI with Large Language Models",
+    provider: "Coursera",
+    year: 2026,
+    url: "https://www.coursera.org/learn/generative-ai-with-llms/home",
+    type: "Course",
+    description: "Learned the fundamentals of how generative AI works and how to deploy it in real-world applications. Authorized by DeepLearning.AI and Amazon Web Services.",
+  },
+  {
+    title: "LeadDev Together",
+    provider: "LeadDev",
+    year: 2022,
+    url: "https://leaddev.com/events/leaddev-together-2022",
+    type: "Conference",
+    description: "A six-part group development course addressing engineering leadership's most fundamental challenges.",
+  },
+  {
+    title: "Introduction to Data Studio",
+    provider: "Google Analytics Academy",
+    year: 2021,
+    type: "Course",
+  },
+  {
+    title: "Management 3.0",
+    provider: "Management 3.0",
+    year: 2021,
+    url: "https://management30.com/workshops/",
+    type: "Workshop",
+    description: "Learned tangible practices to increase employee engagement and foster transformational change within my organization.",
+  },
+  {
+    title: "The Complete Communication Skills Master Class for Life",
+    provider: "Udemy",
+    year: 2020,
+    url: "https://www.udemy.com/course/the-complete-communication-skills-master-class-for-life/",
+    type: "Course",
+    description: "Learned communication skills for persuasion, assertiveness, and all business communication needs.",
+  },
+];
+
+const years = [...new Set(trainings.map((t) => t.year))].sort((a, b) => b - a);
+---
+
+<Layout
+  title="Trainings — Christian Sisti"
+  description="Courses, workshops, and programs I've completed to keep growing as an engineering leader."
+>
+  <div class="py-4">
+    <p class="text-xs font-semibold tracking-widest uppercase text-navy-500 mb-3">Trainings</p>
+    <h1 class="text-4xl font-semibold text-navy-950 mb-3">Continuous Learning</h1>
+    <p class="text-lg text-navy-700 mb-14">
+      Courses, workshops, and programs I've completed to keep growing as an engineering leader.
+    </p>
+
+    <div class="space-y-10">
+      {years.map((year) => (
+        <div class="border-t border-warm-100 pt-8">
+          <p class="text-sm font-medium text-navy-500 mb-4">{year}</p>
+          <ul class="space-y-3">
+            {trainings
+              .filter((t) => t.year === year)
+              .map((t) => (
+                <li>
+                  <div class="flex items-center flex-wrap gap-x-2 gap-y-1">
+                    <span class="text-[10px] font-semibold tracking-wide uppercase text-navy-500 border border-navy-300 rounded-full px-2 py-0.5">
+                      {t.type}
+                    </span>
+                    {t.url ? (
+                      <a
+                        href={t.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-navy-950 font-medium hover:text-navy-700 hover:underline transition-colors"
+                      >
+                        {t.title}
+                      </a>
+                    ) : (
+                      <span class="text-navy-950 font-medium">{t.title}</span>
+                    )}
+                    <span class="text-sm text-navy-500">— {t.provider}</span>
+                  </div>
+                  {t.description && (
+                    <p class="text-sm text-navy-700 mt-1.5 max-w-xl">{t.description}</p>
+                  )}
+                </li>
+              ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
