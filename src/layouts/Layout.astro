@@ -33,7 +33,7 @@ const currentPath = Astro.url.pathname;
         <a href="/" class="text-sm font-semibold tracking-wide text-navy-900 hover:text-navy-700 transition-colors">
           Christian Sisti
         </a>
-        <ul class="flex gap-8 text-sm text-navy-700">
+        <ul class="flex gap-4 sm:gap-8 text-sm text-navy-700">
           <li>
             <a
               href="/bookshelf"
@@ -62,7 +62,7 @@ const currentPath = Astro.url.pathname;
       </nav>
     </header>
 
-    <main class="mx-auto w-full max-w-3xl px-6 py-16 flex-1">
+    <main class="mx-auto w-full max-w-3xl px-6 py-10 sm:py-16 flex-1">
       <slot />
     </main>
 

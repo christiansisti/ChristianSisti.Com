@@ -12,17 +12,17 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   title="Christian Sisti"
   description="Engineering Director specializing in scaling global engineering organizations and modernizing high-traffic platforms."
 >
-  <div class="py-8 flex items-center gap-12">
+  <div class="py-8 flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
     <Image
       src={portrait}
       alt="Christian Sisti"
       width={512}
       quality={95}
-      class="rounded-full object-cover shrink-0 ring-2 ring-warm-100 w-64 h-64" style="object-position: center 15%"
+      class="rounded-full object-cover shrink-0 ring-2 ring-warm-100 w-48 h-48 sm:w-64 sm:h-64" style="object-position: center 15%"
     />
     <div>
       <p class="text-xs font-semibold tracking-widest uppercase text-navy-500 mb-4">Engineering Director</p>
-      <h1 class="text-5xl font-semibold text-navy-950 leading-tight mb-6">
+      <h1 class="text-4xl sm:text-5xl font-semibold text-navy-950 leading-tight mb-6">
         Christian Sisti
       </h1>
       <p class="text-lg text-navy-700 leading-relaxed">
