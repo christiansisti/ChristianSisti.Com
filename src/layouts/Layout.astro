@@ -27,6 +27,14 @@ const currentPath = Astro.url.pathname;
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
     <SEO {title} {description} {image} {type} {pubDate} />
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKX4LWTHDS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NKX4LWTHDS');
+    </script>
   </head>
   <body class="min-h-screen flex flex-col">
 
