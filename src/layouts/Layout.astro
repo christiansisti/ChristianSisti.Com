@@ -3,6 +3,7 @@ import '../styles/global.css';
 import SEO from '../components/SEO.astro';
 import { Image } from 'astro:assets';
 import headerImg from '../assets/header.png';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -27,6 +28,7 @@ const currentPath = Astro.url.pathname;
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
     <SEO {title} {description} {image} {type} {pubDate} />
+    <ClientRouter />
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKX4LWTHDS"></script>
     <script>
