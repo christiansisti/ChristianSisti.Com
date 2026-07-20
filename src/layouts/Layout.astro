@@ -45,42 +45,53 @@ const currentPath = Astro.url.pathname;
         <a href="/" class="text-sm font-semibold tracking-wide text-navy-900 hover:text-navy-700 transition-colors">
           Christian Sisti
         </a>
-        <ul class="flex gap-4 sm:gap-8 text-sm text-navy-700">
+
+        <!-- Desktop nav -->
+        <ul class="hidden sm:flex gap-4 sm:gap-6 text-sm text-navy-700">
           <li>
-            <a
-              href="/bookshelf"
-              class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/bookshelf' }]}
-            >
-              Bookshelf
-            </a>
+            <a href="/bookshelf" class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/bookshelf' }]}>Bookshelf</a>
           </li>
           <li>
-            <a
-              href="/trainings"
-              class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/trainings' }]}
-            >
-              Trainings
-            </a>
+            <a href="/trainings" class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/trainings' }]}>Trainings</a>
           </li>
           <li>
-            <a
-              href="/conferences"
-              class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/conferences' }]}
-            >
-              Conferences
-            </a>
+            <a href="/conferences" class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/conferences' }]}>Conferences</a>
           </li>
           <li>
-            <a
-              href="/about"
-              class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/about' }]}
-            >
-              About
-            </a>
+            <a href="/about" class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/about' }]}>About</a>
           </li>
         </ul>
+
+        <!-- Mobile hamburger button -->
+        <button id="menu-btn" class="sm:hidden flex flex-col gap-1.5 p-2 text-navy-700 hover:text-navy-900" aria-label="Toggle menu">
+          <span class="block w-5 h-0.5 bg-current transition-all"></span>
+          <span class="block w-5 h-0.5 bg-current transition-all"></span>
+          <span class="block w-5 h-0.5 bg-current transition-all"></span>
+        </button>
       </nav>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden sm:hidden border-t border-warm-100 bg-warm-50">
+        <ul class="flex flex-col px-6 py-4 gap-1 text-sm text-navy-700">
+          <li><a href="/bookshelf" class:list={['block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/bookshelf' }]}>Bookshelf</a></li>
+          <li><a href="/trainings" class:list={['block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/trainings' }]}>Trainings</a></li>
+          <li><a href="/conferences" class:list={['block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/conferences' }]}>Conferences</a></li>
+          <li><a href="/about" class:list={['block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/about' }]}>About</a></li>
+        </ul>
+      </div>
     </header>
+
+    <script>
+      function initMenu() {
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (!btn || !menu) return;
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+      }
+      initMenu();
+      document.addEventListener('astro:after-swap', initMenu);
+    </script>
 
     <div class="w-full">
       <Image
