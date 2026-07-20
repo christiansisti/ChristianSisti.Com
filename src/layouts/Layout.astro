@@ -40,7 +40,7 @@ const currentPath = Astro.url.pathname;
   </head>
   <body class="min-h-screen flex flex-col">
 
-    <header class="border-b border-warm-100 sticky top-0 z-50 bg-warm-50/90 backdrop-blur-sm shadow-sm">
+    <header transition:persist class="border-b border-warm-100 sticky top-0 z-50 bg-warm-50/90 backdrop-blur-sm shadow-sm">
       <nav class="mx-auto max-w-3xl px-6 py-5 flex items-center justify-between">
         <a href="/" class="text-sm font-semibold tracking-wide text-navy-900 hover:text-navy-700 transition-colors">
           Christian Sisti
@@ -48,18 +48,10 @@ const currentPath = Astro.url.pathname;
 
         <!-- Desktop nav -->
         <ul class="hidden sm:flex gap-4 sm:gap-6 text-sm text-navy-700">
-          <li>
-            <a href="/bookshelf" class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/bookshelf' }]}>Bookshelf</a>
-          </li>
-          <li>
-            <a href="/trainings" class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/trainings' }]}>Trainings</a>
-          </li>
-          <li>
-            <a href="/conferences" class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/conferences' }]}>Conferences</a>
-          </li>
-          <li>
-            <a href="/about" class:list={['px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/about' }]}>About</a>
-          </li>
+          <li><a href="/bookshelf" data-navlink class="px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900">Bookshelf</a></li>
+          <li><a href="/trainings" data-navlink class="px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900">Trainings</a></li>
+          <li><a href="/conferences" data-navlink class="px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900">Conferences</a></li>
+          <li><a href="/about" data-navlink class="px-3 py-1.5 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900">About</a></li>
         </ul>
 
         <!-- Mobile hamburger button -->
@@ -73,27 +65,54 @@ const currentPath = Astro.url.pathname;
       <!-- Mobile menu -->
       <div id="mobile-menu" class="hidden sm:hidden border-t border-warm-100 bg-warm-50">
         <ul class="flex flex-col px-6 py-4 gap-1 text-sm text-navy-700">
-          <li><a href="/bookshelf" class:list={['block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/bookshelf' }]}>Bookshelf</a></li>
-          <li><a href="/trainings" class:list={['block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/trainings' }]}>Trainings</a></li>
-          <li><a href="/conferences" class:list={['block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/conferences' }]}>Conferences</a></li>
-          <li><a href="/about" class:list={['block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900', { 'font-medium text-navy-900 bg-warm-100': currentPath === '/about' }]}>About</a></li>
+          <li><a href="/bookshelf" data-navlink class="block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900">Bookshelf</a></li>
+          <li><a href="/trainings" data-navlink class="block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900">Trainings</a></li>
+          <li><a href="/conferences" data-navlink class="block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900">Conferences</a></li>
+          <li><a href="/about" data-navlink class="block px-3 py-2 rounded-md transition-colors hover:bg-warm-100 hover:text-navy-900">About</a></li>
         </ul>
       </div>
     </header>
 
     <script>
+      function updateNav() {
+        const path = window.location.pathname;
+        document.querySelectorAll('[data-navlink]').forEach(link => {
+          const active = link.getAttribute('href') === path || (path.startsWith('/blog/') && link.getAttribute('href') === '/');
+          link.classList.toggle('font-medium', active);
+          link.classList.toggle('text-navy-900', active);
+          link.classList.toggle('bg-warm-100', active);
+        });
+      }
+
       function initMenu() {
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
-        if (!btn || !menu) return;
+        if (!btn || !menu || btn.dataset.init) return;
+        btn.dataset.init = 'true';
+
         btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-        menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+        // Close on link click
+        menu.querySelectorAll('a').forEach(a =>
+          a.addEventListener('click', () => menu.classList.add('hidden'))
+        );
+
+        // Close on resize to desktop
+        window.addEventListener('resize', () => {
+          if (window.innerWidth >= 640) menu.classList.add('hidden');
+        });
       }
+
+      function closeMenu() {
+        document.getElementById('mobile-menu')?.classList.add('hidden');
+      }
+
+      updateNav();
       initMenu();
-      document.addEventListener('astro:after-swap', initMenu);
+      document.addEventListener('astro:after-swap', () => { updateNav(); closeMenu(); });
     </script>
 
-    <div class="w-full">
+    <div transition:persist class="w-full">
       <Image
         src={headerImg}
         alt=""
