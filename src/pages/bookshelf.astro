@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 
+import nudge from '../assets/books/nudge.jpg';
 import leadershipSelfDeception from '../assets/books/leadership_self_deception.jpg';
 import creativityInc from '../assets/books/creativity-inc.jpg';
 import productivityProject from '../assets/books/the-productivity-project.jpg';
@@ -12,6 +13,14 @@ import management30 from '../assets/books/management-3-0.jpg';
 import drive from '../assets/books/drive.jpg';
 
 const books = [
+  {
+    title: "Nudge",
+    author: "Richard H. Thaler & Cass R. Sunstein",
+    year: 2023,
+    cover: nudge,
+    takeaway: "The real power of choice lies in how options are presented, not in the options themselves.",
+    readIf: "You want to understand how choice architecture shapes decisions — including your own.",
+  },
   {
     title: "Leadership and Self-Deception",
     author: "The Arbinger Institute",
