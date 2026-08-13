@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const talks = [
+  {
+    id: "3XyNPfWWxiQ",
+    title: "A leader's guide to data strategy in the era of agentic AI",
+    channel: "AWS Events",
+    note: "A sharp reflection on how AI is reshaping organisational structure — not just the tools we use, but how teams are designed around data.",
+  },
+];
+---
+
+<Layout
+  title="Talks — Christian Sisti"
+  description="Talks and videos I recommend on leadership, engineering, and the future of organisations."
+>
+  <div class="py-4">
+    <p class="text-xs font-semibold tracking-widest uppercase text-navy-500 mb-3">Talks</p>
+    <h1 class="text-4xl font-semibold text-navy-950 mb-2">Recommended Talks</h1>
+    <p class="text-lg text-navy-500 mb-10">
+      Videos worth your time on leadership, engineering, and how organisations evolve.
+    </p>
+
+    <div class="space-y-10">
+      {talks.map((talk) => (
+        <div class="border-t border-warm-100 pt-8">
+          <div class="talk-facade relative cursor-pointer group rounded-lg overflow-hidden mb-5" data-id={talk.id}>
+            <img
+              src={`https://img.youtube.com/vi/${talk.id}/maxresdefault.jpg`}
+              alt={talk.title}
+              class="w-full object-cover"
+            />
+            <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
+              <div class="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center shadow-lg">
+                <svg viewBox="0 0 24 24" fill="white" class="w-6 h-6 ml-1">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <h2 class="text-xl font-semibold text-navy-950 mb-1">{talk.title}</h2>
+          <p class="text-sm text-navy-500 mb-4">{talk.channel}</p>
+          <p class="text-navy-700">{talk.note}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<script>
+  function initTalks() {
+    document.querySelectorAll('.talk-facade').forEach(el => {
+      if (el.dataset.init) return;
+      el.dataset.init = 'true';
+      el.addEventListener('click', () => {
+        const id = el.dataset.id;
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+        iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.className = 'w-full aspect-video rounded-lg';
+        el.replaceWith(iframe);
+      });
+    });
+  }
+
+  initTalks();
+  document.addEventListener('astro:after-swap', initTalks);
+</script>
