@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 const organiser = [
   {
     event: "LeadDev Barcelona",
+    url: "https://www.meetup.com/es-es/leaddev-barcelona-meetup/",
     role: "Founding Organiser",
     years: "2025 — ongoing",
     description: "Curating spaces for engineering leaders to tackle the industry's toughest organisational challenges.",
@@ -56,7 +57,11 @@ const attendeeByYear: Record<number, string[]> = {
           <div class="flex gap-6 sm:gap-10">
             <span class="text-sm text-navy-500 shrink-0 w-32 pt-px">{item.years}</span>
             <div>
-              <p class="text-sm font-semibold text-navy-950 mb-1">{item.event}</p>
+              {item.url ? (
+                <a href={item.url} target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-950 hover:text-navy-500 transition-colors mb-1 inline-block">{item.event} ↗</a>
+              ) : (
+                <p class="text-sm font-semibold text-navy-950 mb-1">{item.event}</p>
+              )}
               <p class="text-sm text-navy-500 mb-1">{item.role}</p>
               <p class="text-sm text-navy-700">{item.description}</p>
             </div>
