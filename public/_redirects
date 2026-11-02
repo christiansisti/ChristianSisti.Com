@@ -1,0 +1,3 @@
+# Leads Self Assessment: always points to the latest version of the template.
+# When a new version is released, update the destination URL here.
+/self-assessment https://docs.google.com/spreadsheets/d/13D6sQy6W7rgJ4eGqdv3BTbl3A_NPMVgmq5uMx_sEBRw/copy 302
