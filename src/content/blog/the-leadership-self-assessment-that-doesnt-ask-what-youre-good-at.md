@@ -12,7 +12,7 @@ It sounds reasonable. It isn't. Ask a new lead how good they are at delegation a
 
 So I built one that asks something else.
 
-*Want to skip straight to it? <a href="https://christiansisti.com/self-assessment" target="_blank" rel="noopener"><strong>Make a copy of the template</strong></a>. It's free and private. The rest of this post explains why it's built the way it is.*
+*Want to skip straight to it? <a href="https://christiansisti.com/self-assessment" target="_blank" rel="noopener"><strong>Make a copy of the template (Google Sheets)</strong></a>. It's free and private. The rest of this post explains why it's built the way it is.*
 
 ## "I am happy with..."
 
@@ -67,6 +67,6 @@ That last one is not a filler. A lead running on empty makes every other score w
 
 ## Try it
 
-<a href="https://christiansisti.com/self-assessment" target="_blank" rel="noopener"><strong>Make a copy of the Leads Self Assessment</strong></a>: it's free, and your copy is yours.
+<a href="https://christiansisti.com/self-assessment" target="_blank" rel="noopener"><strong>Make a copy of the Leads Self Assessment (Google Sheets)</strong></a>: it's free, and your copy is yours.
 
 If you use it, I'd love to hear how it went: what surprised you, what's missing, what you'd change. You can reach me on [LinkedIn](https://www.linkedin.com/in/christiansisti/). Or, as the template itself suggests, offer me a white chocolate croissant. Both work. One works better.
