@@ -57,10 +57,6 @@ It is also the best example of why I did not want an AI video tool. A generated 
 
 ## The Launch Plan
 
-I thought the edit was the end. It was the halfway point. Every engineer knows this feeling: code complete is not shipped.
-
-The good news: the launch was already in the tasklist. On day one, Claude had planned it as the last phase, so when the edit was done I did not have to think about what came next. I just opened the list.
-
 The whole launch took one evening, about 3 to 4 hours:
 
 - **Three vertical teasers.** Claude helped me cut them from the final video.
