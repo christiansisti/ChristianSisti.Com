@@ -57,7 +57,7 @@ It is also the best example of why I did not want an AI video tool. A generated 
 
 ## The Launch Plan
 
-The whole launch took one evening, about 3 to 4 hours:
+The whole launch took one evening:
 
 - **Three vertical teasers.** Claude helped me cut them from the final video.
 - **The website.** Claude updated her site with a block that embeds the Premiere.
