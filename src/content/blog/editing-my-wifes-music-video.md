@@ -1,6 +1,6 @@
 ---
-title: "Editing My Wife's Music Video: Notes From an Engineer Who Had Never Opened DaVinci Resolve"
-description: "I edited Arianna Lanzillotti's official music video for Così with Claude as a co-editor and the free version of DaVinci Resolve. What worked, what didn't, and what it taught me about AI as a creative partner."
+title: "Vibe Editing My Wife's Music Video"
+description: "After vibe coding my wife's website, I tried the same with her music video: Claude as co-editor, DaVinci Resolve as the instrument, and me in control down to the last frame."
 pubDate: 2026-11-19
 tags: ["ai", "creativity", "engineering", "leadership"]
 draft: false
